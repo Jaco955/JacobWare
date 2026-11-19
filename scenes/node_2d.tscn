@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://cfrhp3gjxqe2i"]
+
+[ext_resource type="Script" uid="uid://b8sw1n30fowjb" path="res://scenes/node_2d.gd" id="1_4dvvg"]
+[ext_resource type="Texture2D" uid="uid://b67fkocmwld5o" path="res://icon.svg" id="1_6e84v"]
+
+[node name="main" type="Node2D" unique_id=1458474175]
+script = ExtResource("1_4dvvg")
+
+[node name="background" type="TextureRect" parent="." unique_id=634750921]
+offset_right = 1151.0
+offset_bottom = 652.0
+texture = ExtResource("1_6e84v")
+
+[node name="title" type="RichTextLabel" parent="." unique_id=261294957]
+clip_contents = false
+offset_left = 4.0000305
+offset_top = 208.00003
+offset_right = 769.0
+offset_bottom = 349.00003
+rotation = -0.2673389
+theme_override_constants/outline_size = 40
+theme_override_font_sizes/normal_font_size = 100
+text = "JacobWare V1.0"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1723316290]
+offset_left = 528.0
+offset_top = 202.0
+offset_right = 995.0
+offset_bottom = 548.0
+
+[node name="start" type="Button" parent="VBoxContainer" unique_id=2033534350]
+layout_mode = 2
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/font_size = 85
+text = "PLAY
+"
+
+[node name="menu" type="Button" parent="VBoxContainer" unique_id=287993877]
+layout_mode = 2
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/font_size = 85
+text = "SETTINGS"
+
+[node name="quit" type="Button" parent="VBoxContainer" unique_id=914211425]
+layout_mode = 2
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/font_size = 85
+text = "QUIT"
+
+[connection signal="pressed" from="VBoxContainer/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_quit_pressed"]
