@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://54h5io07845h"]
+
+[ext_resource type="Texture2D" uid="uid://b3tssav4g05ym" path="res://IMG-20260813-WA0003.jpg" id="1_3pbma"]
+
+[node name="credit_scene" type="Node2D" unique_id=1759158646]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1201587890]
+offset_right = 1153.0
+offset_bottom = 653.0
+texture = ExtResource("1_3pbma")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=2054611049]
+clip_contents = false
+offset_left = 167.0
+offset_top = 40.0
+offset_right = 1004.0
+offset_bottom = 277.0
+theme_override_colors/default_color = Color(0.79607844, 0.90588236, 0.22745098, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/normal_font_size = 85
+text = "Thanks to all of the following :3"

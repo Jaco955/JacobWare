@@ -1,0 +1,121 @@
+[gd_scene format=3 uid="uid://c4r2dbo5pppc2"]
+
+[ext_resource type="Script" uid="uid://wqo0tuaccems" path="res://scenes/menu.gd" id="1_con2f"]
+[ext_resource type="Texture2D" uid="uid://ciqogsqfwcwsa" path="res://WhatsApp Image 2026-09-21 at 5.20.34 PM.jpeg" id="1_yqeox"]
+[ext_resource type="AudioStream" uid="uid://d2t3eceohd512" path="res://soaring pt.1 (1).wav" id="3_mhnvy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_16kos"]
+bg_color = Color(0.46391934, 0.5849483, 0.9129084, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f03ra"]
+content_margin_top = 4.0
+content_margin_bottom = 1.0
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v4es7"]
+content_margin_top = 1.0
+bg_color = Color(0.88507956, 0.4795664, 0.016059306, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8dwxc"]
+bg_color = Color(0.86356544, 0.4969564, 0, 1)
+
+[node name="menu" type="Node2D" unique_id=883176447]
+script = ExtResource("1_con2f")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1997814022]
+offset_left = -1.0
+offset_top = 4.0
+offset_right = 1152.0
+offset_bottom = 652.0
+texture = ExtResource("1_yqeox")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=898533436]
+offset_left = 274.0
+offset_top = 29.0
+offset_right = 868.0
+offset_bottom = 169.0
+theme_override_colors/default_color = Color(0.94401985, 0.59904635, 0.4186439, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/normal_font_size = 100
+text = "Main Menu"
+
+[node name="Back" type="Button" parent="." unique_id=1394526462]
+offset_left = 17.0
+offset_top = 27.0
+offset_right = 237.0
+offset_bottom = 104.0
+theme_override_constants/outline_size = 24
+theme_override_font_sizes/font_size = 50
+text = "Back <-"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2072253075]
+stream = ExtResource("3_mhnvy")
+autoplay = true
+bus = &"Music"
+
+[node name="mute" type="Button" parent="." unique_id=1925590888]
+offset_left = 266.0
+offset_top = 306.0
+offset_right = 895.0
+offset_bottom = 383.0
+theme_override_colors/font_color = Color(0.8945647, 0.85108465, 0.9721487, 1)
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/font_size = 50
+text = "Mute Sound"
+
+[node name="default" type="Button" parent="." unique_id=596187594]
+offset_left = 268.0
+offset_top = 398.0
+offset_right = 897.0
+offset_bottom = 475.0
+theme_override_colors/font_color = Color(0.8945647, 0.85108465, 0.9721487, 1)
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/font_size = 50
+text = "Default Volume"
+
+[node name="credits" type="Button" parent="." unique_id=1792666391]
+offset_left = 270.0
+offset_top = 492.0
+offset_right = 899.0
+offset_bottom = 569.0
+theme_override_colors/font_color = Color(0.8945647, 0.85108465, 0.9721487, 1)
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/font_size = 50
+text = "Credits"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=949092338]
+offset_left = 260.0
+offset_top = 192.0
+offset_right = 889.0
+offset_bottom = 289.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer" unique_id=221256586]
+layout_mode = 2
+theme_override_colors/default_color = Color(1, 0.41960785, 0.37254903, 1)
+theme_override_constants/outline_size = 24
+theme_override_font_sizes/normal_font_size = 50
+text = "Music Volume"
+fit_content = true
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer" unique_id=181990424]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_16kos")
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer/PanelContainer" unique_id=447032429]
+layout_mode = 2
+theme_override_styles/slider = SubResource("StyleBoxFlat_f03ra")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_v4es7")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_8dwxc")
+max_value = 1.0
+step = 0.05
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="mute" to="." method="_on_mute_pressed"]
+[connection signal="pressed" from="default" to="." method="_on_default_pressed"]
+[connection signal="pressed" from="credits" to="." method="_on_credits_pressed"]
+[connection signal="value_changed" from="VBoxContainer/PanelContainer/HSlider" to="." method="_on_h_slider_value_changed"]
