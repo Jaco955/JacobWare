@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://e05ndvhntfxy"]
+
+[ext_resource type="Script" uid="uid://cd8x4m7e2f6ll" path="res://scenes/player.gd" id="1_g2els"]
+[ext_resource type="Texture2D" uid="uid://gvbjkw2kiyk7" path="res://peakmin.png" id="2_g2els"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhqgy"]
+atlas = ExtResource("2_g2els")
+region = Rect2(0, 0, 26, 54)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
+atlas = ExtResource("2_g2els")
+region = Rect2(26, 0, 26, 54)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qlg0r"]
+atlas = ExtResource("2_g2els")
+region = Rect2(52, 0, 26, 54)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
+atlas = ExtResource("2_g2els")
+region = Rect2(78, 0, 26, 54)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fjrip"]
+atlas = ExtResource("2_g2els")
+region = Rect2(104, 0, 26, 54)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smehm"]
+atlas = ExtResource("2_g2els")
+region = Rect2(130, 0, 26, 54)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ur7pv"]
+atlas = ExtResource("2_g2els")
+region = Rect2(156, 0, 26, 54)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y4r1p"]
+atlas = ExtResource("2_g2els")
+region = Rect2(182, 0, 26, 54)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_16kos"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qhqgy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dqkch")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qlg0r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tuyoq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fjrip")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smehm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ur7pv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y4r1p")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D" unique_id=1529781603]
+script = ExtResource("1_g2els")
+
+[node name="animatedsprite2d" type="AnimatedSprite2D" parent="." unique_id=368896934]
+position = Vector2(192, 129.00002)
+scale = Vector2(1.1538464, 1.1296295)
+sprite_frames = SubResource("SpriteFrames_16kos")
+autoplay = "default"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=569085792]
+polygon = PackedVector2Array(180, 104, 184, 104, 184, 105, 186, 105, 186, 107, 187, 107, 188, 107, 188, 108, 189, 108, 189, 110, 190, 110, 190, 114, 189, 115, 189, 116, 190, 117, 190, 119, 191, 119, 191, 122, 192, 122, 192, 128, 193, 128, 193, 129, 197, 129, 197, 130, 198, 130, 198, 131, 199, 131, 199, 132, 200, 132, 200, 134, 201, 134, 202, 135, 203, 137, 204, 137, 204, 144, 205, 144, 205, 146, 206, 146, 206, 151, 206, 151, 204, 151, 202, 151, 202, 152, 201, 152, 201, 153, 200, 153, 200, 154, 199, 154, 199, 155, 198, 155, 198, 156, 197, 156, 197, 157, 198, 157, 198, 160, 193, 160, 193, 156, 190, 156, 190, 157, 191, 157, 191, 160, 186, 160, 186, 155, 184, 155, 184, 153, 183, 153, 183, 150, 181, 150, 180, 151, 179, 151, 179, 152, 177, 152, 177, 148, 178, 148, 178, 146, 179, 146, 179, 136, 180, 136, 180, 135, 181, 135, 181, 133, 183, 133, 183, 132, 184, 132, 184, 131, 185, 131, 185, 130, 187, 130, 187, 128, 188, 128, 188, 123, 187, 123, 187, 120, 186, 120, 186, 116, 184, 116, 184, 115, 182, 115, 182, 114, 180, 114, 180, 113, 179, 113, 179, 112, 178, 112, 178, 106, 179, 106, 179, 105, 180, 105)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1769174082]
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Area2D" unique_id=865200890]
+polygon = PackedVector2Array(180, 104, 184, 104, 184, 105, 186, 105, 186, 107, 187, 107, 188, 107, 188, 108, 189, 108, 189, 110, 190, 110, 190, 114, 189, 115, 189, 116, 190, 117, 190, 119, 191, 119, 191, 122, 192, 122, 192, 128, 193, 128, 193, 129, 197, 129, 197, 130, 198, 130, 198, 131, 199, 131, 199, 132, 200, 132, 200, 134, 201, 134, 202, 135, 203, 137, 204, 137, 204, 144, 205, 144, 205, 146, 206, 146, 206, 151, 206, 151, 204, 151, 202, 151, 202, 152, 201, 152, 201, 153, 200, 153, 200, 154, 199, 154, 199, 155, 198, 155, 198, 156, 197, 156, 197, 157, 198, 157, 198, 160, 193, 160, 193, 156, 190, 156, 190, 157, 191, 157, 191, 160, 186, 160, 186, 155, 184, 155, 184, 153, 183, 153, 183, 150, 181, 150, 180, 151, 179, 151, 179, 152, 177, 152, 177, 148, 178, 148, 178, 146, 179, 146, 179, 136, 180, 136, 180, 135, 181, 135, 181, 133, 183, 133, 183, 132, 184, 132, 184, 131, 185, 131, 185, 130, 187, 130, 187, 128, 188, 128, 188, 123, 187, 123, 187, 120, 186, 120, 186, 116, 184, 116, 184, 115, 182, 115, 182, 114, 180, 114, 180, 113, 179, 113, 179, 112, 178, 112, 178, 106, 179, 106, 179, 105, 180, 105)
