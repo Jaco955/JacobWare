@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://bpq8fi50w4mlb"]
 
+[ext_resource type="Script" uid="uid://talci3851qfw" path="res://scenes/minigame_1.gd" id="1_lmjug"]
 [ext_resource type="PackedScene" uid="uid://e05ndvhntfxy" path="res://scenes/player.tscn" id="1_tk6fs"]
+[ext_resource type="PackedScene" uid="uid://dhmbp44u6v8ns" path="res://scenes/battery.tscn" id="2_og05i"]
+[ext_resource type="PackedScene" uid="uid://d3amk624ejcey" path="res://scenes/minitimer.tscn" id="4_v5ebm"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3ru16"]
 load_path = "res://.godot/imported/1794677917645.png-293aabb5c1210666e74de3086c589604.ctex"
@@ -21,7 +24,7 @@ size = Vector2(182, 39)
 size = Vector2(177, 46)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lg1v3"]
-size = Vector2(323, 41)
+size = Vector2(323, 38)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h01bx"]
 size = Vector2(182, 37)
@@ -33,6 +36,7 @@ size = Vector2(179, 38)
 size = Vector2(63.74247, 6.604927)
 
 [node name="minigame_1" type="Node2D" unique_id=416712731]
+script = ExtResource("1_lmjug")
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=1944178168]
 repeat_size = Vector2(1000, 0)
@@ -62,7 +66,7 @@ position = Vector2(576.5, 626.75)
 shape = SubResource("RectangleShape2D_16kos")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="platform1" unique_id=1097275695]
-position = Vector2(574.00006, -26)
+position = Vector2(577.00006, -65)
 rotation = 1.5667357
 shape = SubResource("RectangleShape2D_5crko")
 
@@ -75,9 +79,6 @@ shape = SubResource("RectangleShape2D_5crko")
 position = Vector2(-6, 286.00003)
 rotation = -0.007278681
 shape = SubResource("RectangleShape2D_5crko")
-
-[node name="Player" parent="." unique_id=1529781603 instance=ExtResource("1_tk6fs")]
-position = Vector2(11, 427)
 
 [node name="platform2" type="StaticBody2D" parent="." unique_id=1833027268]
 
@@ -128,7 +129,7 @@ offset_bottom = 195.0
 color = Color(0.8867945, 0.81521523, 3.85046e-07, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="platform5" unique_id=1599362139]
-position = Vector2(517.5, 173.5)
+position = Vector2(517.5, 175)
 shape = SubResource("RectangleShape2D_lg1v3")
 
 [node name="platform6" type="StaticBody2D" parent="." unique_id=246592514]
@@ -158,6 +159,41 @@ position = Vector2(269.5, 62)
 shape = SubResource("RectangleShape2D_7yyrn")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="platform7" unique_id=176161649]
-position = Vector2(358, 118.999985)
+position = Vector2(353.99997, 118.99999)
 rotation = 1.5448391
 shape = SubResource("RectangleShape2D_77fge")
+
+[node name="Player" parent="." unique_id=1529781603 instance=ExtResource("1_tk6fs")]
+position = Vector2(11, 427)
+
+[node name="battery" parent="." unique_id=1348363649 instance=ExtResource("2_og05i")]
+position = Vector2(768, 423)
+
+[node name="battery2" parent="." unique_id=977075122 instance=ExtResource("2_og05i")]
+position = Vector2(480, 288)
+
+[node name="battery3" parent="." unique_id=510494348 instance=ExtResource("2_og05i")]
+position = Vector2(138, 162)
+
+[node name="battery4" parent="." unique_id=17359014 instance=ExtResource("2_og05i")]
+position = Vector2(276, 12)
+
+[node name="battery5" parent="." unique_id=1186341125 instance=ExtResource("2_og05i")]
+position = Vector2(519, 120)
+
+[node name="battery6" parent="." unique_id=1160171663 instance=ExtResource("2_og05i")]
+position = Vector2(849, 243)
+
+[node name="battery7" parent="." unique_id=1255792413 instance=ExtResource("2_og05i")]
+position = Vector2(984, 564)
+
+[node name="minitimer" parent="." unique_id=1026640515 instance=ExtResource("4_v5ebm")]
+position = Vector2(963, 27)
+
+[connection signal="battery_collected" from="battery" to="." method="_on_battery_battery_collected"]
+[connection signal="battery_collected" from="battery2" to="." method="_on_battery_battery_collected"]
+[connection signal="battery_collected" from="battery3" to="." method="_on_battery_battery_collected"]
+[connection signal="battery_collected" from="battery4" to="." method="_on_battery_battery_collected"]
+[connection signal="battery_collected" from="battery5" to="." method="_on_battery_battery_collected"]
+[connection signal="battery_collected" from="battery6" to="." method="_on_battery_battery_collected"]
+[connection signal="battery_collected" from="battery7" to="." method="_on_battery_battery_collected"]
