@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://talci3851qfw" path="res://scenes/minigame_1.gd" id="1_lmjug"]
 [ext_resource type="PackedScene" uid="uid://e05ndvhntfxy" path="res://scenes/player.tscn" id="1_tk6fs"]
 [ext_resource type="PackedScene" uid="uid://dhmbp44u6v8ns" path="res://scenes/battery.tscn" id="2_og05i"]
+[ext_resource type="AudioStream" uid="uid://t1pt0yq53842" path="res://between my chest and my back.wav" id="4_fa05o"]
 [ext_resource type="PackedScene" uid="uid://d3amk624ejcey" path="res://scenes/minitimer.tscn" id="4_v5ebm"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3ru16"]
@@ -187,8 +188,13 @@ position = Vector2(849, 243)
 [node name="battery7" parent="." unique_id=1255792413 instance=ExtResource("2_og05i")]
 position = Vector2(984, 564)
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1885238727]
+position = Vector2(685, 20)
+scale = Vector2(0.6405485, 0.63726366)
+stream = ExtResource("4_fa05o")
+
 [node name="minitimer" parent="." unique_id=1026640515 instance=ExtResource("4_v5ebm")]
-position = Vector2(963, 27)
+position = Vector2(684, 18)
 
 [connection signal="battery_collected" from="battery" to="." method="_on_battery_battery_collected"]
 [connection signal="battery_collected" from="battery2" to="." method="_on_battery_battery_collected"]

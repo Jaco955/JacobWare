@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bh1a62xflx8r8" path="res://scenes/level_scene.gd" id="1_c8xsp"]
 [ext_resource type="Script" uid="uid://c8hreesb0e1n4" path="res://scenes/sunholder.gd" id="3_fkwfp"]
+[ext_resource type="AudioStream" uid="uid://t1pt0yq53842" path="res://between my chest and my back.wav" id="4_c8xsp"]
 [ext_resource type="Texture2D" uid="uid://cvouq1ikfvblc" path="res://cute sun.png" id="4_eohcs"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_a74lg"]
@@ -175,3 +176,8 @@ offset_bottom = 460.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 80
 text = "0.0 "
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1898796418]
+position = Vector2(1, 2)
+scale = Vector2(0.6405485, 0.63726366)
+stream = ExtResource("4_c8xsp")

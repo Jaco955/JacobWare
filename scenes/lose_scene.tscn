@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://b3wyrqtxekxt0"]
+
+[ext_resource type="Script" uid="uid://47oiwxi5gf3i" path="res://scenes/lose_scene.gd" id="1_6vthu"]
+[ext_resource type="Texture2D" uid="uid://daap6qft7g6qo" path="res://1794677917645.png" id="1_68m3b"]
+[ext_resource type="AudioStream" uid="uid://bnbhk4o3u6ya" path="res://como te voy a olvidar.wav" id="3_m2sg5"]
+
+[node name="lose_scene" type="Node2D" unique_id=395644732]
+script = ExtResource("1_6vthu")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=580100948]
+offset_right = 1160.0
+offset_bottom = 659.0
+texture = ExtResource("1_68m3b")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=506637016]
+clip_contents = false
+offset_left = 309.0
+offset_top = 72.0
+offset_right = 816.0
+offset_bottom = 219.0
+theme_override_constants/outline_size = 40
+theme_override_font_sizes/normal_font_size = 100
+text = "You lose"
+
+[node name="start" type="Button" parent="." unique_id=2044828416]
+offset_left = 297.0
+offset_top = 259.0
+offset_right = 823.0
+offset_bottom = 383.0
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/font_size = 85
+text = "Play Again?"
+
+[node name="quit" type="Button" parent="." unique_id=1662249098]
+offset_left = 334.0
+offset_top = 397.0
+offset_right = 785.0
+offset_bottom = 521.0
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/font_size = 85
+text = "Quit"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1230201400]
+stream = ExtResource("3_m2sg5")
+
+[connection signal="pressed" from="start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]

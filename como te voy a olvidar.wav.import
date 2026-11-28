@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bnbhk4o3u6ya"
+path="res://.godot/imported/como te voy a olvidar.wav-4c40308a8d1c7bf9aeb2601401183245.sample"
+
+[deps]
+
+source_file="res://como te voy a olvidar.wav"
+dest_files=["res://.godot/imported/como te voy a olvidar.wav-4c40308a8d1c7bf9aeb2601401183245.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://t1pt0yq53842"
+path="res://.godot/imported/between my chest and my back.wav-c02754876f4ceccbf5005dc800e5972b.sample"
+
+[deps]
+
+source_file="res://between my chest and my back.wav"
+dest_files=["res://.godot/imported/between my chest and my back.wav-c02754876f4ceccbf5005dc800e5972b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
