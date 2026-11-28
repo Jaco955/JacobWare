@@ -181,3 +181,4 @@ text = "0.0 "
 position = Vector2(1, 2)
 scale = Vector2(0.6405485, 0.63726366)
 stream = ExtResource("4_c8xsp")
+autoplay = true

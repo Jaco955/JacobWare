@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cvouq1ikfvblc" path="res://cute sun.png" id="1_ju4f3"]
 [ext_resource type="Script" uid="uid://cvut0edu8s6yd" path="res://scenes/minigame_2.gd" id="1_uiylj"]
 [ext_resource type="PackedScene" uid="uid://d3amk624ejcey" path="res://scenes/minitimer.tscn" id="2_uiylj"]
+[ext_resource type="AudioStream" uid="uid://t1pt0yq53842" path="res://between my chest and my back.wav" id="4_ksu6r"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ksu6r"]
 load_path = "res://.godot/imported/1794677917645.png-293aabb5c1210666e74de3086c589604.ctex"
@@ -131,10 +132,10 @@ expand_mode = 1
 stretch_mode = 2
 
 [node name="Button" type="Button" parent="." unique_id=346845170]
-offset_left = 38.0
-offset_top = 55.0
-offset_right = 183.0
-offset_bottom = 166.0
+offset_left = 594.0
+offset_top = 389.0
+offset_right = 739.0
+offset_bottom = 500.0
 flat = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Button" unique_id=926062872]
@@ -155,14 +156,16 @@ scale = Vector2(4.5000005, 3.5625005)
 sprite_frames = SubResource("SpriteFrames_16kos")
 
 [node name="Button3" type="Button" parent="." unique_id=1581443472]
-offset_left = 383.0
-offset_top = 90.0
-offset_right = 528.0
-offset_bottom = 201.0
+offset_left = 725.0
+offset_top = 172.0
+offset_right = 870.0
+offset_bottom = 283.0
+rotation = -0.0026921616
 flat = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Button3" unique_id=1072791611]
-position = Vector2(73.00001, 56.999996)
+position = Vector2(72.84898, 56.19632)
+rotation = 0.0018478744
 scale = Vector2(4.5000005, 3.5625005)
 sprite_frames = SubResource("SpriteFrames_16kos")
 
@@ -263,7 +266,24 @@ scale = Vector2(4.5000005, 3.5625005)
 sprite_frames = SubResource("SpriteFrames_16kos")
 
 [node name="Node2D" parent="." unique_id=1026640515 instance=ExtResource("2_uiylj")]
-position = Vector2(947, 438)
+position = Vector2(1, 10)
+
+[node name="description" type="RichTextLabel" parent="." unique_id=1110985144]
+clip_contents = false
+offset_left = 632.0
+offset_top = 546.0
+offset_right = 1113.6444
+offset_bottom = 656.816
+rotation = -0.06898858
+theme_override_constants/outline_size = 40
+theme_override_font_sizes/normal_font_size = 75
+text = "Explode Em!!"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=338685342]
+position = Vector2(1100, 617)
+scale = Vector2(4.5000005, 3.5625005)
+stream = ExtResource("4_ksu6r")
+autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_pressed"]

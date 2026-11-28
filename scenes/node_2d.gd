@@ -12,6 +12,8 @@ func _process(_delta: float) -> void:
 
 
 func _on_start_pressed() -> void:
+	Global.lives = 5
+	Global.minigames_done = 0
 	get_tree().change_scene_to_file("res://scenes/level_scene.tscn")
 
 

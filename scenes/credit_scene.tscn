@@ -38,4 +38,20 @@ text = "go back?"
 stream = ExtResource("3_f4eow")
 autoplay = true
 
+[node name="thanks" type="RichTextLabel" parent="." unique_id=1914160682]
+clip_contents = false
+offset_left = 171.0
+offset_top = 252.00003
+offset_right = 669.56903
+offset_bottom = 636.43823
+rotation = 0.003494285
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/normal_font_size = 45
+text = "My Mom and sister <3
+Mordecai & Rigby
+Chief Wiggum
+Cloud
+Kratos
+Phil Swift"
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -192,9 +192,21 @@ position = Vector2(984, 564)
 position = Vector2(685, 20)
 scale = Vector2(0.6405485, 0.63726366)
 stream = ExtResource("4_fa05o")
+autoplay = true
 
 [node name="minitimer" parent="." unique_id=1026640515 instance=ExtResource("4_v5ebm")]
 position = Vector2(684, 18)
+
+[node name="description" type="RichTextLabel" parent="." unique_id=1518825602]
+clip_contents = false
+offset_left = 22.0
+offset_top = 399.0
+offset_right = 439.15512
+offset_bottom = 508.58862
+rotation = -0.06898858
+theme_override_constants/outline_size = 40
+theme_override_font_sizes/normal_font_size = 75
+text = "Get Them!!"
 
 [connection signal="battery_collected" from="battery" to="." method="_on_battery_battery_collected"]
 [connection signal="battery_collected" from="battery2" to="." method="_on_battery_battery_collected"]

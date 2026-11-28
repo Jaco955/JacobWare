@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://s5qb5jo70eny"]
+
+[ext_resource type="Script" uid="uid://iifqe20ykdgd" path="res://done_screen.gd" id="1_uqm27"]
+[ext_resource type="Texture2D" uid="uid://daap6qft7g6qo" path="res://1794677917645.png" id="2_k66lo"]
+[ext_resource type="AudioStream" uid="uid://puxt0t15irmd" path="res://mag ni fi que (1).wav" id="3_k66lo"]
+
+[node name="done_screen" type="Node2D" unique_id=246597001]
+script = ExtResource("1_uqm27")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=329357258]
+offset_right = 1153.0
+offset_bottom = 639.0
+texture = ExtResource("2_k66lo")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=417353631]
+clip_contents = false
+offset_left = 309.0
+offset_top = 37.0
+offset_right = 816.0
+offset_bottom = 184.0
+theme_override_constants/outline_size = 40
+theme_override_font_sizes/normal_font_size = 100
+text = "You Win!!!"
+
+[node name="start" type="Button" parent="." unique_id=1812229102]
+offset_left = 297.0
+offset_top = 187.0
+offset_right = 823.0
+offset_bottom = 311.0
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/font_size = 85
+text = "Play Again?"
+
+[node name="quit" type="Button" parent="." unique_id=1077499104]
+offset_left = 343.0
+offset_top = 325.0
+offset_right = 794.0
+offset_bottom = 449.0
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/font_size = 85
+text = "Quit Game"
+
+[node name="credit" type="Button" parent="." unique_id=576245024]
+offset_left = 343.0
+offset_top = 473.0
+offset_right = 794.0
+offset_bottom = 597.0
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/font_size = 85
+text = "Credits"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1729908110]
+stream = ExtResource("3_k66lo")
+autoplay = true
+
+[connection signal="pressed" from="start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="credit" to="." method="_on_credit_pressed"]
